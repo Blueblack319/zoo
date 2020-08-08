@@ -5,6 +5,6 @@
 - [x] gulp
 - [x] html
 - [x] header
-- [ ] grid
-- [ ] img
-- [ ] text
+- [x] grid
+- [x] img
+- [x] text
