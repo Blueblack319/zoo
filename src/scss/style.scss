@@ -17,6 +17,7 @@ header {
   height: 50px;
   width: 100%;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .header__container {
@@ -26,15 +27,32 @@ header {
   .container__left {
     display: grid;
     grid-template-columns: 1fr 5.5fr;
+    transition: background-color;
+    &:hover {
+      background-color: $grey;
+    }
     .logo {
       padding-left: 10px;
       @extend %middle;
       font-size: 23px;
       font-weight: 600;
+      transition: color;
+      &:hover ~ .menu span {
+        color: black;
+      }
+      &:hover {
+        color: white;
+      }
     }
     .menu {
       @extend %middle;
       padding-left: 10px;
+      transition: color;
+      &:hover {
+        span {
+          color: white;
+        }
+      }
       span {
         padding-right: 60px;
         font-size: 30px;
@@ -48,6 +66,10 @@ header {
     justify-content: space-between;
     font-size: 28px;
     display: flex;
+    transition: background-color;
+    &:hover {
+      background-color: $grey;
+    }
     .menu {
       flex-grow: 1;
       @extend %middle;
@@ -62,6 +84,30 @@ header {
         font-size: 15px;
         padding-right: 20px;
       }
+    }
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  .item {
+    width: 100%;
+    cursor: pointer;
+    .item__img {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .item__text {
+      @extend %middle;
+      height: 33px;
+      padding-left: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
     }
   }
 }
