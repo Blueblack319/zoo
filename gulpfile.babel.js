@@ -3,12 +3,13 @@ import del from "del";
 import sass from "gulp-sass";
 import autoprefixer from "gulp-autoprefixer";
 import minify from "gulp-csso";
+
 sass.compiler = require("node-sass");
 
 const routes = {
   style: {
     src: "src/scss/style.scss",
-    dist: "dist",
+    dist: "dist/css",
     watch: "src/scss/*.scss",
   },
 };
